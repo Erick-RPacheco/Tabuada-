@@ -38,7 +38,8 @@ multiplicationForm.addEventListener("submit", (e) => {
 
   const multiplicatorNumber = +multiplicationInput.value;
 
-  if (!multiplicationNumber || !multiplicatorNumber) return;
+  if (!multiplicationNumber || !multiplicatorNumber || multiplicatorNumber < 0)
+    return;
 
   createTable(multiplicationNumber, multiplicatorNumber);
 });
